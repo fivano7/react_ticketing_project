@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 //koristimo /api/users/ i na to concatinateamo rutu iz userRoutes,
 //npr /api/users/login, a u userRoutes imamo samo /login
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/tickets', require('./routes/ticketRoutes'));
 
 //za handleanje errora
 app.use(errorHandler);
